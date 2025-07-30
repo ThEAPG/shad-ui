@@ -15,6 +15,7 @@ public sealed partial class MainWindowViewModel : ViewModelBase
     private readonly DashboardViewModel _dashboardViewModel;
     private readonly ThemeViewModel _themeViewModel;
     private readonly TypographyViewModel _typographyViewModel;
+    private readonly AccordionViewModel _accordionViewModel;
     private readonly AvatarViewModel _avatarViewModel;
     private readonly ButtonViewModel _buttonViewModel;
     private readonly CardViewModel _cardViewModel;
@@ -46,6 +47,7 @@ public sealed partial class MainWindowViewModel : ViewModelBase
         DashboardViewModel dashboardViewModel,
         ThemeViewModel themeViewModel,
         TypographyViewModel typographyViewModel,
+        AccordionViewModel accordionViewModel,
         AvatarViewModel avatarViewModel,
         ButtonViewModel buttonViewModel,
         CardViewModel cardViewModel,
@@ -75,6 +77,7 @@ public sealed partial class MainWindowViewModel : ViewModelBase
         _dashboardViewModel = dashboardViewModel;
         _themeViewModel = themeViewModel;
         _typographyViewModel = typographyViewModel;
+        _accordionViewModel = accordionViewModel;
         _avatarViewModel = avatarViewModel;
         _buttonViewModel = buttonViewModel;
         _cardViewModel = cardViewModel;
@@ -146,6 +149,12 @@ public sealed partial class MainWindowViewModel : ViewModelBase
     private void OpenButtons()
     {
         SwitchPage(_buttonViewModel);
+    }
+
+    [RelayCommand]
+    private void OpenAccordion()
+    {
+        SwitchPage(_accordionViewModel);
     }
 
     [RelayCommand]

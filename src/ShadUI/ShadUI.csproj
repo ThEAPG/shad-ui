@@ -43,4 +43,19 @@
         <None Include="..\..\icon.png" Pack="true" PackagePath="\"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Update="Controls\Accordion\Accordion.axaml.cs">
+        <DependentUpon>Accordion.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Controls\Accordion\AccordionItem.axaml.cs">
+        <DependentUpon>AccordionItem.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Controls\Accordion\ContentExpandControl.axaml.cs">
+        <DependentUpon>ContentExpandControl.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
+
 </Project>
